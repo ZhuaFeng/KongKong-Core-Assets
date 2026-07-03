@@ -1,6 +1,6 @@
 {
-  "version": "0.0.0.10",
+  "version": "0.0.0.11",
   "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-  "notes": "⚠️ 大更新！蹦蹦蹦！支援高解析度BUFF辨識~也許吧！",
-  "force_update": true
+  "notes": "⚠️ 更新！支援高解析度BUFF辨識~也許吧！(追上空空的練功速度)",
+  "force_update": false
 }
