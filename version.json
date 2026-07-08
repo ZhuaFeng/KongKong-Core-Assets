@@ -1,6 +1,6 @@
 {
-  "version": "0.0.0.14",
+  "version": "0.0.0.15",
   "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-  "notes": "⚠️ 更新！修正HUD無法正常關閉！",
+  "notes": "⚠️ 更新！修復HUD無法正常關閉！修正HUD BUFF排序 ！瘋狂更新中(我開玩笑的)！",
   "force_update": false
 }
