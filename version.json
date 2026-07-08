@@ -1,6 +1,6 @@
 {
-  "version": "0.0.0.13",
+  "version": "0.0.0.14",
   "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-  "notes": "⚠️ 更新！支援高解析度BUFF辨識(Beta-v3)！",
+  "notes": "⚠️ 更新！修正HUD無法正常關閉！",
   "force_update": false
 }
