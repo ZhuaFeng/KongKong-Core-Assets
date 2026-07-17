@@ -1,6 +1,6 @@
 {
-  "version": "0.0.0.22",
+  "version": "0.0.0.23",
   "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
   "notes": "⚠️更新就對了XDD!",
-  "force_update": false
+  "force_update": True
 }
