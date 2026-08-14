@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Kong Kong OBS HUD</title>
+    <style>
+        body {
+            background-color: transparent; 
+            color: #fff;
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 15px;
+            overflow: hidden;
+        }
+        .hud-container {
+            background: rgba(21, 21, 26, 0.85);
+            border: 2px solid #00FFFF;
+            border-radius: 8px;
+            padding: 15px;
+            width: 280px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+        .title {
+            color: #00FFFF;
+            font-size: 16px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px #00FFFF;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .label { color: #A0AEC0; }
+        .value { color: #FFFFFF; }
+        .profit { color: #00FF00; text-shadow: 0 0 5px #00FF00; }
+        .buff-container { 
+            margin-top: 12px; 
+            border-top: 1px dashed #555; 
+            padding-top: 10px; 
+            display: none; 
+        }
+        .buff-item { font-size: 13px; margin-bottom: 4px; font-weight: bold;}
+        .missing { color: #FF5555; animation: blink 1s infinite; }
+        .early { color: #FFD700; }
+        @keyframes blink { 50% { opacity: 0.3; } }
+    </style>
+    <script src="obs_config.js"></script>
+</head>
+<body>
+    <div class="hud-container">
+        <div class="title">Kong Kong Assistant</div>
+        
+        <!-- ★ 改為動態容器，移除原本寫死的 stat-row -->
+        <div id="stats-container"></div>
+
+        <div class="buff-container" id="buff-list"></div>
+    </div>
+
+    <script>
+        function connect() {
+            if (typeof DYNAMIC_PORT === 'undefined') {
+                setTimeout(connect, 2000);
+                return;
+            }
+
+            const ws = new WebSocket(`ws://127.0.0.1:${DYNAMIC_PORT}`);
+
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+
+                // ★ 動態渲染數據面板
+                if(data.display_items) {
+                    const container = document.getElementById("stats-container");
+                    container.innerHTML = ""; // 清空舊畫面
+                    
+                    data.display_items.forEach(item => {
+                        // 如果是淨利潤，自動套用綠色的 profit class
+                        const valClass = item.highlight ? "value profit" : "value";
+                        container.innerHTML += `<div class="stat-row"><span class="label">${item.label}</span><span class="${valClass}">${item.value}</span></div>`;
+                    });
+                }
+
+                // 更新 BUFF 警報區塊
+                const buffList = document.getElementById("buff-list");
+                buffList.innerHTML = "";
+                let hasAlerts = false;
+
+                if (data.missing && data.missing.length > 0) {
+                    data.missing.forEach(b => {
+                        buffList.innerHTML += `<div class="buff-item missing">⚠️ ${b} 已消失</div>`;
+                        hasAlerts = true;
+                    });
+                }
+                if (data.early && data.early.length > 0) {
+                    data.early.forEach(b => {
+                        buffList.innerHTML += `<div class="buff-item early">⏳ ${b} 即將結束</div>`;
+                        hasAlerts = true;
+                    });
+                }
+
+                buffList.style.display = hasAlerts ? "block" : "none";
+            };
+
+            ws.onclose = () => {
+                setTimeout(connect, 2000);
+            };
+        }
+
+        connect();
+    </script>
+</body>
+</html>

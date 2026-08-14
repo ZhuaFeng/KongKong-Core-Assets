@@ -1,5 +1,5 @@
 {
-    "version": "0.0.0.38",
+    "version": "0.0.0.01",
     "files": {
         "deno.exe": {
             "hash": "71f9647a3be871e09ada71049ae754f4",
@@ -75,6 +75,21 @@
             "hash": "952d77a31c0171ae90c0086aa8e3fcc7",
             "size": 344,
             "url": "https://raw.githubusercontent.com/ZhuaFeng/KongKong-Core-Assets/main/core_engine/cv2/utils/__init__.py"
+        },
+        "cv2/__pycache__/load_config_py3.cpython-312.pyc": {
+            "hash": "8cb98aeb59b0f4d05b178bdec65f26c8",
+            "size": 677,
+            "url": "https://raw.githubusercontent.com/ZhuaFeng/KongKong-Core-Assets/main/core_engine/cv2/__pycache__/load_config_py3.cpython-312.pyc"
+        },
+        "cv2/__pycache__/version.cpython-312.pyc": {
+            "hash": "205474ed20b4776e8a0da81eb2aa4832",
+            "size": 273,
+            "url": "https://raw.githubusercontent.com/ZhuaFeng/KongKong-Core-Assets/main/core_engine/cv2/__pycache__/version.cpython-312.pyc"
+        },
+        "cv2/__pycache__/__init__.cpython-312.pyc": {
+            "hash": "d8b5842819397d0d429cbad5937b961b",
+            "size": 9593,
+            "url": "https://raw.githubusercontent.com/ZhuaFeng/KongKong-Core-Assets/main/core_engine/cv2/__pycache__/__init__.cpython-312.pyc"
         },
         "numpy/fft/_pocketfft_umath.cp312-win_amd64.pyd": {
             "hash": "104213bdab40e5702ba0a7f86cc8665e",
