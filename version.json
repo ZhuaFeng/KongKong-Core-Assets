@@ -1,6 +1,6 @@
 {
-    "version": "0.0.0.39",
+    "version": "0.0.0.40",
     "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-    "notes": "1. 支援 4K 高解析度與 UI 自動縮放<br>2. 實裝極致效能模式，大幅降低 CPU 與記憶體佔用<br>3. 新增核心檔案自動補齊與修復功能",
+    "notes": "Muisc播放 :D",
     "force_update": false
 }
