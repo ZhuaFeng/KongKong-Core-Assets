@@ -1,6 +1,6 @@
 {
-    "version": "0.0.0.42",
+    "version": "0.0.0.43",
     "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-    "notes": "HUD 模組 替換",
+    "notes": "Resize 新增 移除標題列 強制關閉遊戲視窗",
     "force_update": false
 }
