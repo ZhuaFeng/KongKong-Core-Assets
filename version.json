@@ -1,6 +1,6 @@
 {
     "version": "0.0.0.45",
     "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-    "notes": "經驗助手 新增EXP 遊戲幣 HP BUFF 可選辨識/n 新增快速切換BUFF設定檔",
+    "notes": "1.經驗助手 新增EXP 遊戲幣 HP BUFF 可選辨識<br> 2.新增快速切換BUFF設定檔",
     "force_update": false
 }
