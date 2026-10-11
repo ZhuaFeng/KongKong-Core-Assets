@@ -1,6 +1,6 @@
 {
-    "version": "0.0.0.47",
+    "version": "0.0.0.49",
     "url": "https://github.com/ZhuaFeng/KongKong-Core-Assets/releases/download/Version/KongKongAssistant_beta.exe",
-    "notes": "1.計算驗證優化測試 <br>2.實裝驗證流程",
-    "force_update": true
+    "notes": "1.音效優化 <br>2.設定UI調整",
+    "force_update": false
 }
