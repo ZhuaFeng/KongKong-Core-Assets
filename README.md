@@ -44,7 +44,7 @@ KongKongAssistant/
     ├── tessdata/            # Tesseract OCR 語言包
     ├── vlc/                 # VLC 播放器 DLL 依賴
     ├── ffmpeg.exe           # 音訊轉碼器
-    ├── deno.exe             # YouTube JS 破解引擎
+    ├── deno.exe             
     └── WgcEngine.dll        # 高幀率無邊框截圖引擎
 
 ```
